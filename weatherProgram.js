@@ -5,14 +5,21 @@ function calculateWeater(validNumber) {
   // "document.getElementById" runs the Element Id you give in the HTML tags.
   // The innerHTML property sets or returns the HTML content (inner HTML) of an element.
   // "validNumber" is declared as parseFloat which means any type of number you put in the input field, index.html 20-26.
-  document.getElementById("outputCelcius").innerHTML = validNumber - 273.15;
 
   // Kelvin => Celsius
-  document.getElementById("outputFahrenheit").innerHTML =
-    (validNumber - 273) * 1.8 + 32;
+  document.getElementById("outputCelcius").innerHTML = Math.trunc(
+    validNumber - 273.15
+  );
 
-  document.getElementById("outputNewton").innerHTML =
-    (validNumber - 273) * (33 / 100);
+  // Kelvin => Fahrenheit
+  document.getElementById("outputFahrenheit").innerHTML = Math.trunc(
+    (validNumber - 273) * 1.8 + 32
+  );
+
+  // Kelvin => Newton
+  document.getElementById("outputNewton").innerHTML = Math.trunc(
+    (validNumber - 273) * (33 / 100)
+  );
 }
 
 /*
